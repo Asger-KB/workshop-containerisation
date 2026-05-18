@@ -103,6 +103,20 @@ Static nginx-based web-app which hosts static HTML files.
 1. Create a static http web-app that hosts our static replacement `index.html` file.
 2. You can use `nginx`, `python -m http.server` or any other way to host the static `html/index.html` file via HTTP on an exposed port.
 
+### [6-python-jupyter](./6-python-jupyter/)
+
+A pandas/numpy/matplotlib + scikit-learn Jupyter Lab environment with some sample notebooks.
+
+Setting this up locally is the classic Python pain-point: wrong Python version,
+broken pip, native build failures on `numpy`/`pandas`/`scikit-learn`.
+Containerising it pins everything
+
+#### TASK
+
+1. Containerize the notebook environment, installing the pinned dependencies from `requirements.txt`. If this proves difficult (and it is), feel free to check `Dockerfile.solution` on the `solutions` branch.
+2. Start Jupyter Lab on an exposed port and open a notebook from your host browser.
+3. Volume-mount the folder so notebook edits persist back to your host.
+
 ## Educational examples (already containerized)
 
 These are not exercises — they're ready-to-run examples to study and play with.

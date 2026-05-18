@@ -25,6 +25,14 @@ services:
     ports:
       - "127.0.0.1:8080:80"
 
+  python-jupyter:
+    build:
+      context: ./6-python-jupyter
+      dockerfile: Dockerfile.solution
+    image: workshop/python-jupyter
+    ports:
+      - "127.0.0.1:8888:8888"
+
   micro-go-app:
     build: ./edu-micro-go-app
     image: workshop/micro-go-app

@@ -1,0 +1,19 @@
+# This file specifies files and directories that should be ignored by Docker when building an image.
+# It will be combined with any .gitignore files in parent directories.
+# See https://docs.docker.com/engine/reference/builder/#dockerignore-file for more details.
+
+# Common
+README.md
+CHANGELOG.md
+compose.yml
+Dockerfile
+
+# Python
+__pycache__
+*.pyc
+.venv
+venv
+.ipynb_checkpoints
+
+# JetBrains
+.idea
