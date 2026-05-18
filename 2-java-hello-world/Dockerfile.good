@@ -20,4 +20,7 @@ COPY message.txt /data/message.txt
 
 ENV NAME=World
 
+# For containerized Java apps it's a good idea to limit heap to 75% of resource limit.
+ENV JAVA_TOOL_OPTIONS="-XX:MaxRAMPercentage=75.0"
+
 ENTRYPOINT ["java", "Hello"]
