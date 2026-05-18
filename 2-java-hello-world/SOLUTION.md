@@ -18,6 +18,13 @@ Problems:
 - Separate build and runtime stages
 - Dependencies fetched in early layer (cached)
 
+## Improvements in Dockerfile.goodest
+
+- Using jlink to treeshake the Java Runtime, keeping only what we actually use
+- Distroless runtime image to further reduce size
+- Alternatively chainguard runtime image for further reduction
+- Runtime container doesn't run as root
+
 ## Run and inject env + volume
 
 Set environment variable and volume-mount a new message into the container at runtime.

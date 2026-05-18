@@ -1,0 +1,50 @@
+#################
+## Build stage ##
+#################
+FROM eclipse-temurin:21-jdk AS build
+
+WORKDIR /app
+
+COPY Hello.java .
+
+RUN javac Hello.java && \
+    jar --create --file app.jar Hello.class
+
+RUN jdeps \
+    --ignore-missing-deps \
+    --print-module-deps \
+    app.jar > deps.txt && cat deps.txt
+
+ENV JAVA_MODULES="java.base,java.logging,java.naming,java.management,java.instrument,java.sql,java.xml,jdk.crypto.ec"
+
+RUN jlink \
+    --add-modules $JAVA_MODULES,$(cat deps.txt) \
+    --strip-debug \
+    --no-man-pages \
+    --no-header-files \
+    --compress=zip-6 \
+    --output /opt/jre
+
+
+###################
+## Runtime stage ##
+###################
+# Inspect image size: docker inspect java:extreme | jq '.[0].Size' | numfmt --to=iec
+# debian-slim       => 135M
+# debian-distroless =>  72M
+# chainguard-glibc  =>  48M
+# FROM debian:trixie-slim AS runtime
+# FROM gcr.io/distroless/base-debian13:nonroot AS runtime
+
+# See https://edu.chainguard.dev/chainguard/chainguard-images/overview/
+FROM cgr.dev/chainguard/glibc-dynamic AS runtime
+
+WORKDIR /app
+
+COPY --from=build /opt/jre /opt/jre
+COPY --from=build /app/app.jar app.jar
+COPY message.txt /data/message.txt
+
+ENV PATH="/opt/jre/bin:$PATH"
+
+ENTRYPOINT ["java", "-cp", "app.jar", "Hello"]
