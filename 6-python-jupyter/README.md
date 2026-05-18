@@ -45,11 +45,11 @@ your host (and vice versa):
 
 ```bash
 docker run --rm -p 127.0.0.1:8888:8888 \
-  -v "$(pwd)/6-python-jupyter:/app" \
+  -v "./notebooks:/app" \
   workshop/python-jupyter
 ```
 
-Edit `notebook_analysis.ipynb`, save, and confirm the file on disk has changed.
+Edit a notebook, save, and confirm the file on host disk has changed.
 
 ## TASK 3: Swap the dataset at runtime
 
