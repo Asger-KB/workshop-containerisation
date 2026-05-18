@@ -42,16 +42,16 @@
     {
       "type": "dockerfile",
       "request": "launch",
-      "name": "Docker: distroless",
-      "dockerfile": "${workspaceFolder}/edu-distroless/Dockerfile",
-      "contextPath": "${workspaceFolder}/edu-distroless",
+      "name": "Docker: python-jupyter",
+      "dockerfile": "${workspaceFolder}/6-python-jupyter/Dockerfile",
+      "contextPath": "${workspaceFolder}/6-python-jupyter",
     },
     {
       "type": "dockerfile",
       "request": "launch",
       "name": "Docker: micro-go",
       "dockerfile": "${workspaceFolder}/edu-micro-go-app/Dockerfile",
-      "contextPath": "${workspaceFolder}/micro-go-app",
-    }
+      "contextPath": "${workspaceFolder}/edu-micro-go-app",
+    },
   ]
 }

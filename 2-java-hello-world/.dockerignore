@@ -5,7 +5,7 @@
 # Common
 README.md
 CHANGELOG.md
-docker-compose.yml
+compose.yml
 Dockerfile
 
 # JetBrains

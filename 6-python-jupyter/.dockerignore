@@ -8,23 +8,12 @@ CHANGELOG.md
 compose.yml
 Dockerfile
 
-# git
-.git
-.gitattributes
-.gitignore
-
+# Python
+__pycache__
+*.pyc
+.venv
+venv
+.ipynb_checkpoints
 
 # JetBrains
 .idea
-
-# Node
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-node_modules/
-
-# dotnet
-**/obj
-**/bin
