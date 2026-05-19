@@ -1,6 +1,6 @@
 FROM ubuntu:26.04
 
-# You are now inside a clean Ubuntu machine 🧐
+# You are now inside a clean Ubuntu container 🧐
 
 # HINT: You can RUN useful commands inside the Ubuntu container while building.
 RUN echo "Hello container-builder, you are currently $(whoami)" && sleep 3
