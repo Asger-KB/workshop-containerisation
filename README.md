@@ -1,6 +1,12 @@
 # Exercises for Containerisation Workshop
 
-Create Dockerfiles for these applications
+This repo contains example applications for containerisation. Some are educational and already containerised, others are prefixed with a number and ready for containerisation.
+
+## Repo layout
+
+- `<num>-<name>/` — apps for **you** to containerize. Work through these as exercises.
+- `edu-<name>/` — already-containerized educational examples. Read, run and learn from them.
+- [cli-demo/](./cli-demo/) — live-demo walkthrough showing the power of the Docker CLI.
 
 ## Pre-requisites
 
@@ -16,12 +22,6 @@ Have these documentation sites in hand when doing the assignments:
 - https://docs.docker.com/reference/dockerfile/
 - https://docs.docker.com/guides/java/containerize/
 - https://docs.docker.com/guides/dotnet/containerize/
-
-## Repo layout
-
-- `<num>-<name>/` — apps for **you** to containerize. Work through these as exercises.
-- `edu-<name>/` — already-containerized educational examples. Read, run, learn from them.
-- [cli-demo/](./cli-demo/) — live-demo walkthrough showing the power of the Docker CLI & Compose.
 
 ## Assignments
 
