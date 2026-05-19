@@ -57,12 +57,12 @@ git checkout -t origin/solutions
 
 ### [1-ubuntu-debugger](./1-ubuntu-debugger/)
 
-Simple image that extends Ubuntu 24.04 distro with some extra network debugging tools.
+Simple image that extends Ubuntu 26.04 distro with some extra network debugging tools.
 Useful to understand base-images and layering
 
 #### TASK
 
-1. Start with `FROM ubuntu:24.04` and then make sure curl and dnsutils are installed in the container image.
+1. Start with `FROM ubuntu:26.04` and then make sure curl and dnsutils are installed in the container image.
 2. Start and execute into the container image, then try using the `curl` and `nslookup` tools.
 
 ### [2-java-hello-world](./2-java-hello-world/)
